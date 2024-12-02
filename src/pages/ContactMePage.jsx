@@ -40,14 +40,14 @@ function ContactMePage() {
       <div className="flex flex-col gap-12">
         <Link
           to="/"
-          className="text-primary-900 hover:text-primary-800 text-[1.2rem] font-semibold"
+          className="text-[1.2rem] font-semibold text-primary-900 hover:text-primary-800"
         >
           &larr; Go back Home
         </Link>
         {submitted ? (
           <div className="flex flex-col gap-8 text-[2rem] font-semibold">
             {result}
-            <span className="animate-fadein ml-60">
+            <span className="ml-60 animate-fadein">
               <img src="/thu01.png" className="h-[200px] w-[200px]" />
             </span>
           </div>
@@ -80,7 +80,7 @@ function ContactMePage() {
                 className="rounded-lg border border-gray-700 bg-gray-50 px-4 py-4 text-[1.4rem] placeholder:text-[1.2rem] placeholder:text-gray-700"
                 name="email"
                 type="email"
-                pattern=" /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/"
+                // pattern=" /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/"
                 placeholder="Email Address"
                 required
               />
@@ -93,7 +93,7 @@ function ContactMePage() {
                 placeholder="Let me know what you need"
                 className="rounded-lg border border-gray-700 bg-gray-50 px-4 py-4 text-[1.4rem] placeholder:text-[1.2rem] placeholder:text-gray-700"
               />
-              <button className="bg-primary-900 hover:bg-primary-800 flex items-center justify-center rounded-lg px-10 py-4 text-center text-[1.2rem] font-semibold text-gray-100">
+              <button className="flex items-center justify-center rounded-lg bg-primary-900 px-10 py-4 text-center text-[1.2rem] font-semibold text-gray-100 hover:bg-primary-800">
                 {!submitting ? "Lets Talk" : <SpinnerMini />}
               </button>
             </form>
