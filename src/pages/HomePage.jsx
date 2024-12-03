@@ -18,7 +18,7 @@ function HomePage() {
               <h1 className="font-medium tracking-wide">Hi! I am</h1>
               <h1 className="font-semibold tracking-widest">Tobias</h1>
             </div>
-            <div className="mb-10 flex flex-col text-[1.4rem] font-semibold text-gray-900">
+            <div className="mb-10 flex flex-col text-[1.4rem] text-gray-900">
               <p>Software Engineer specialized in frontend development</p>
               <p>of mobile and web apps with over 3 years working experience</p>
             </div>
@@ -38,34 +38,24 @@ function HomePage() {
               </div>
               <div className="flex flex-col items-center gap-2">
                 <IoLogoJavascript className="h-[2rem] w-[2rem]" />
-                <h2 className="text-[1.1rem] font-semibold text-gray-800">
-                  Javascript
-                </h2>
+                <h2 className="text-[1.1rem] text-gray-800">Javascript</h2>
               </div>
 
               <div className="flex flex-col items-center gap-2">
                 <FaReact className="h-[2rem] w-[2rem]" />
-                <h2 className="text-[1.1rem] font-semibold text-gray-800">
-                  React js{" "}
-                </h2>
+                <h2 className="text-[1.1rem] text-gray-800">React js </h2>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <RiNextjsLine className="h-[2rem] w-[2rem]" />
-                <h2 className="text-[1.1rem] font-semibold text-gray-800">
-                  Next js
-                </h2>
+                <h2 className="text-[1.1rem] text-gray-800">Next js</h2>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <TbBrandReactNative className="h-[2rem] w-[2rem]" />
-                <h2 className="text-[1.1rem] font-semibold text-gray-800">
-                  React Native
-                </h2>
+                <h2 className="text-[1.1rem] text-gray-800">React Native</h2>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <RiTailwindCssFill className="h-[2rem] w-[2rem]" />
-                <h2 className="text-[1.1rem] font-semibold text-gray-800">
-                  Tailwind
-                </h2>
+                <h2 className="text-[1.1rem] text-gray-800">Tailwind</h2>
               </div>
             </div>
           </div>

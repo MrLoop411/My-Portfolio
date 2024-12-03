@@ -56,7 +56,7 @@ function ContactMePage() {
             <div className="flex flex-col gap-4">
               <h2 className="text-[3rem] font-semibold">Say Hello!</h2>
               <h2 className="text-[2rem] font-semibold">Lets Work Together</h2>
-              <p className="text-[1.4rem] font-semibold text-gray-800">
+              <p className="text-[1.4rem] text-gray-800">
                 I would love to meet with You and discuss potential
                 Collaborations and Ventures
               </p>
