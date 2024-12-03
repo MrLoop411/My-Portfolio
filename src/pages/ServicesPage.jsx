@@ -9,7 +9,7 @@ function ServicesPage() {
         <h2 className="text-[2.5rem] font-semibold">
           Building Digital Products, Brands and Experience
         </h2>
-        <h3 className="mb-8 text-[1.4rem] font-semibold">
+        <h3 className="mb-8 text-[1.4rem]">
           Take a look at the Services I provide{" "}
         </h3>
         <img src="/arrow10.png" className="h-20 w-20" />

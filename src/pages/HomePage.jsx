@@ -61,13 +61,13 @@ function HomePage() {
           </div>
         </div>
 
-        <div className="w-1/2 flex-1">
+        <div className="w-1/2 flex-1 opacity-0 lg:opacity-100">
           <img src="/portjpg.png" className="mx-auto h-[330px] w-[300px]" />
         </div>
       </div>
       <div className="mt-20 flex w-full flex-col">
         <h2 className="mb-10 text-[2rem] font-semibold">Latest Projects</h2>
-        <div className="flex justify-between">
+        <div className="flex justify-between gap-12 max-md:flex-col">
           <div className="flex flex-col items-center gap-4 rounded-xl bg-primary-800 px-4 py-4">
             <img src="/wild1.jpg" className="h-[20rem] w-[35rem]" />
             <p className="rounded-full bg-gray-500 px-4 py-1 text-center text-[1.2rem] font-semibold tracking-wider">
@@ -82,13 +82,11 @@ function HomePage() {
             </p>
           </div>
 
-          <div className="w-[30%]">
-            <div className="flex flex-col items-center gap-4 rounded-xl bg-gray-800 px-4 py-4">
-              <img src="/rating1.png" className="h-[20rem] w-[40rem]" />
-              <p className="rounded-full bg-gray-500 px-4 py-1 text-center text-[1.2rem] font-semibold tracking-wider">
-                iRating Web App
-              </p>
-            </div>
+          <div className="flex flex-col items-center gap-4 rounded-xl bg-gray-800 px-4 py-4">
+            <img src="/rating1.png" className="h-[20rem] w-[40rem]" />
+            <p className="rounded-full bg-gray-500 px-4 py-1 text-center text-[1.2rem] font-semibold tracking-wider">
+              iRating Web App
+            </p>
           </div>
         </div>
       </div>
