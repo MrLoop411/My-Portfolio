@@ -20,9 +20,7 @@ function PageNav() {
       {/* <div>
         <img src="/public/T3.png" className="h-20 w-20" />
       </div> */}
-      <h2 className="text-[1.6rem] font-semibold italic tracking-widest">
-        Tee
-      </h2>
+      <h2 className="text-[2rem] font-semibold italic tracking-widest">Tee</h2>
 
       <div className="right-0 border border-primary-800 px-8 py-3 font-semibold transition-all duration-300 hover:bg-primary-100">
         <Link to="/contactme" className="">
