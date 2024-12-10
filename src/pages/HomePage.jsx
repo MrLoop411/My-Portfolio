@@ -6,15 +6,16 @@ import { RiNextjsLine } from "react-icons/ri";
 import { TbBrandReactNative } from "react-icons/tb";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoJavascript } from "react-icons/io";
+
 function HomePage() {
   return (
-    <div className="flex h-full flex-col gap-12">
+    <div className="flex h-full flex-col gap-12 bg-[--color-grey-0] px-[5.5rem] py-[4.5rem]">
       <PageNav />
 
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-12">
           <div className="flex flex-col gap-2">
-            <div className="flex flex-col text-[5.5rem]">
+            <div className="flex flex-col text-[5.5rem] text-[--color-grey-900]">
               <h1 className="font-medium tracking-wide">Hi! I am</h1>
               <h1 className="font-semibold tracking-widest">Tobias</h1>
             </div>
@@ -31,30 +32,30 @@ function HomePage() {
                 Hire Me
               </Link>
             </div>
-            <div className="mt-4 flex items-center justify-between gap-12 rounded-xl bg-gray-950 px-8 py-6 text-gray-50 shadow-lg">
+            <div className="mt-4 flex items-center justify-between gap-12 rounded-xl bg-[--color-grey-900] px-8 py-6 text-gray-50 shadow-lg">
               <div className="flex flex-col items-center bg-accent-400 px-4 py-4">
                 <h2 className="text-[2rem] font-semibold">3+</h2>
                 <p className="text-[1.1rem] font-semibold">Years Experience</p>
               </div>
               <div className="flex flex-col items-center gap-2">
-                <IoLogoJavascript className="h-[2rem] w-[2rem]" />
+                <IoLogoJavascript className="h-[2rem] w-[2rem] text-[--color-grey-0]" />
                 <h2 className="text-[1.1rem] text-gray-800">Javascript</h2>
               </div>
 
               <div className="flex flex-col items-center gap-2">
-                <FaReact className="h-[2rem] w-[2rem]" />
+                <FaReact className="h-[2rem] w-[2rem] text-[--color-grey-0]" />
                 <h2 className="text-[1.1rem] text-gray-800">React js </h2>
               </div>
               <div className="flex flex-col items-center gap-2">
-                <RiNextjsLine className="h-[2rem] w-[2rem]" />
+                <RiNextjsLine className="h-[2rem] w-[2rem] text-[--color-grey-0]" />
                 <h2 className="text-[1.1rem] text-gray-800">Next js</h2>
               </div>
               <div className="flex flex-col items-center gap-2">
-                <TbBrandReactNative className="h-[2rem] w-[2rem]" />
+                <TbBrandReactNative className="h-[2rem] w-[2rem] text-[--color-grey-0]" />
                 <h2 className="text-[1.1rem] text-gray-800">React Native</h2>
               </div>
               <div className="flex flex-col items-center gap-2">
-                <RiTailwindCssFill className="h-[2rem] w-[2rem]" />
+                <RiTailwindCssFill className="h-[2rem] w-[2rem] text-[--color-grey-0]" />
                 <h2 className="text-[1.1rem] text-gray-800">Tailwind</h2>
               </div>
             </div>

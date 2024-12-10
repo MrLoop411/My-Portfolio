@@ -36,7 +36,7 @@ function ContactMePage() {
   };
 
   return (
-    <div className="mt-20 grid-cols-2 gap-20 sm:grid">
+    <div className="mt-20 grid-cols-2 gap-20 bg-[--color-grey-0] px-[5.5rem] py-[4.5rem] sm:grid">
       <div className="flex flex-col gap-12">
         <Link
           to="/"
@@ -45,7 +45,7 @@ function ContactMePage() {
           &larr; Go back Home
         </Link>
         {submitted ? (
-          <div className="flex flex-col gap-8 text-[2rem] font-semibold">
+          <div className="flex flex-col gap-8 text-[2rem]">
             {result}
             <span className="ml-60 animate-fadein">
               <img src="/thu01.png" className="h-[200px] w-[200px]" />
@@ -54,8 +54,12 @@ function ContactMePage() {
         ) : (
           <>
             <div className="flex flex-col gap-4">
-              <h2 className="text-[3rem] font-semibold">Say Hello!</h2>
-              <h2 className="text-[2rem] font-semibold">Lets Work Together</h2>
+              <h2 className="text-[3rem] font-semibold text-[--color-grey-900]">
+                Say Hello!
+              </h2>
+              <h2 className="text-[2rem] font-semibold text-[--color-grey-900]">
+                Lets Work Together
+              </h2>
               <p className="text-[1.4rem] text-gray-800">
                 I would love to meet with You and discuss potential
                 Collaborations and Ventures
@@ -105,7 +109,7 @@ function ContactMePage() {
           </>
         )}
       </div>
-      <div className="mt-20 flex flex-col items-center gap-8 rounded-lg bg-gray-950 px-2 py-8 opacity-0 sm:opacity-100">
+      <div className="mt-20 flex flex-col items-center gap-8 rounded-lg bg-[--color-grey-0] px-2 py-8 opacity-0 sm:opacity-100">
         <img src="/bg707.png" className="h-[400px] w-[400px] flex-1" />
         <div className="flex gap-12">
           <FaInstagram className="h-[3rem] w-[3rem] text-gray-50" />

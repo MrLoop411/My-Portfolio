@@ -2,14 +2,14 @@ import PageNav from "../components/PageNav";
 
 function ServicesPage() {
   return (
-    <div className="flex flex-col gap-12">
+    <div className="flex flex-col gap-12 bg-[--color-grey-0] px-[5.5rem] py-[4.5rem]">
       <PageNav />
 
       <div className="mb-12 mt-12 flex flex-col items-center gap-2 text-center">
-        <h2 className="text-[2.5rem] font-semibold">
+        <h2 className="text-[2.5rem] font-semibold text-[--color-grey-900]">
           Building Digital Products, Brands and Experience
         </h2>
-        <h3 className="mb-8 text-[1.4rem]">
+        <h3 className="mb-8 text-[1.4rem] text-[--color-grey-900]">
           Take a look at the Services I provide{" "}
         </h3>
         <img src="/arrow10.png" className="h-20 w-20" />

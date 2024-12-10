@@ -2,16 +2,18 @@ import PageNav from "../components/PageNav";
 
 function ProjectsPage() {
   return (
-    <div className="flex h-full flex-col gap-12">
+    <div className="flex h-full flex-col gap-12 bg-[--color-grey-0] px-[5.5rem] py-[4.5rem]">
       <PageNav />
 
       <div className="mb-12 mt-12 flex flex-col items-center gap-4 text-center">
-        <h1 className="text-[3rem] font-semibold">Hello, I am Tobias!</h1>
+        <h1 className="text-[3rem] font-semibold text-[--color-grey-900]">
+          Hello, I am Tobias!
+        </h1>
         <p className="text-[1.4rem] text-gray-800">
           I am a Software Engineer from Nigeria ready to help you with web
           design, Web and Mobile App development
         </p>
-        <p className="text-[1.6rem] font-semibold">
+        <p className="text-[1.6rem] font-semibold text-[--color-grey-900]">
           You will find here my best projects so far, take a look!
         </p>
       </div>
