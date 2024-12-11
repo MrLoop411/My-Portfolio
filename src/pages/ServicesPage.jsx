@@ -15,7 +15,7 @@ function ServicesPage() {
         <img src="/arrow10.png" className="h-20 w-20" />
       </div>
 
-      <ul className="gap-12 md:flex">
+      <ul className="gap-12 space-y-10 md:flex">
         <li className="flex flex-1 flex-col items-center justify-center border border-gray-500 px-12 py-12 text-center">
           <img src="/uiux.png" className="h-50 w-50" />
           <h2 className="text-[2rem] font-semibold text-[--color-grey-900]">

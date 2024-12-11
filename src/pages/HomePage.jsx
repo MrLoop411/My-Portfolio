@@ -67,7 +67,7 @@ function HomePage() {
         </div>
       </div>
       <div className="mt-20 flex w-full flex-col">
-        <h2 className="text-[--color-grey-900 ] mb-10 text-[2rem] font-semibold">
+        <h2 className="mb-10 text-[2rem] font-semibold text-[--color-grey-900]">
           Latest Projects
         </h2>
         <div className="flex justify-between gap-12 max-md:flex-col">
