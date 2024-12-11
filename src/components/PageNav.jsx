@@ -40,11 +40,11 @@ function PageNav() {
         <DarkModeToogle />
 
         <button className="nav-btn" onClick={showNavBar}>
-          <FaTimes className="h-10 w-10" />
+          <FaTimes className="h-10 w-10 text-gray-700" />
         </button>
       </nav>
       <button className="nav-btn" onClick={showNavBar}>
-        <IoMenuOutline className="h-10 w-10" />
+        <IoMenuOutline className="h-10 w-10 text-[--color-grey-900]" />
       </button>
       {/* <div className="flex gap-8">
         <button className="nav-btn" onClick={showNavBar}>

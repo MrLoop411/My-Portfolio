@@ -32,7 +32,7 @@ function HomePage() {
                 Hire Me
               </Link>
             </div>
-            <div className="mt-4 flex items-center justify-between gap-12 rounded-xl bg-[--color-grey-900] px-8 py-6 text-gray-50 shadow-lg">
+            <div className="mt-4 items-center justify-between gap-12 space-y-5 rounded-xl bg-[--color-grey-900] px-8 py-6 text-gray-50 shadow-lg sm:flex">
               <div className="flex flex-col items-center bg-accent-400 px-4 py-4">
                 <h2 className="text-[2rem] font-semibold">3+</h2>
                 <p className="text-[1.1rem] font-semibold">Years Experience</p>
