@@ -15,7 +15,7 @@ function HomePage() {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-12">
           <div className="flex flex-col gap-2">
-            <div className="flex flex-col text-[5.5rem] text-[--color-grey-900]">
+            <div className="flex flex-col text-[4rem] text-[--color-grey-900] sm:text-[5.5rem]">
               <h1 className="font-medium tracking-wide">Hi! I am</h1>
               <h1 className="font-semibold tracking-widest">Tobias</h1>
             </div>
@@ -67,7 +67,9 @@ function HomePage() {
         </div>
       </div>
       <div className="mt-20 flex w-full flex-col">
-        <h2 className="mb-10 text-[2rem] font-semibold">Latest Projects</h2>
+        <h2 className="text-[--color-grey-900 ] mb-10 text-[2rem] font-semibold">
+          Latest Projects
+        </h2>
         <div className="flex justify-between gap-12 max-md:flex-col">
           <div className="flex flex-col items-center gap-4 rounded-xl bg-primary-800 px-4 py-4">
             <img src="/wild1.jpg" className="h-[20rem] w-[35rem]" />
