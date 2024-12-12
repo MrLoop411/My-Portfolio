@@ -112,9 +112,9 @@ function ContactMePage() {
       <div className="mt-20 flex flex-col items-center gap-8 rounded-lg bg-[--color-grey-0] px-2 py-8 opacity-0 sm:opacity-100">
         <img src="/bg707.png" className="h-[400px] w-[400px] flex-1" />
         <div className="flex gap-12">
-          <FaInstagram className="h-[3rem] w-[3rem] text-gray-50" />
-          <FaTwitter className="h-[3rem] w-[3rem] text-gray-50" />
-          <FaLinkedinIn className="h-[3rem] w-[3rem] text-gray-50" />
+          <FaInstagram className="h-[3rem] w-[3rem] text-[--color-grey-900]" />
+          <FaTwitter className="h-[3rem] w-[3rem] text-[--color-grey-900]" />
+          <FaLinkedinIn className="h-[3rem] w-[3rem] text-[--color-grey-900]" />
         </div>
       </div>
     </div>

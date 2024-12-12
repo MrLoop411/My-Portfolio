@@ -37,26 +37,38 @@ function HomePage() {
                 <h2 className="text-[2rem] font-semibold">3+</h2>
                 <p className="text-[1.1rem] font-semibold">Years Experience</p>
               </div>
-              <div className="flex flex-col items-center gap-2">
-                <IoLogoJavascript className="h-[2rem] w-[2rem] text-[--color-grey-0]" />
-                <h2 className="text-[1.1rem] text-gray-800">Javascript</h2>
-              </div>
+              <div className="flex items-center justify-between md:gap-12">
+                <div className="flex flex-col items-center gap-2">
+                  <IoLogoJavascript className="h-[2rem] w-[2rem] text-[--color-grey-0]" />
+                  {/* <h2 className="text-[1.1rem] text-gray-800 opacity-0 md:opacity-100">
+                    Javascript
+                  </h2> */}
+                </div>
 
-              <div className="flex flex-col items-center gap-2">
-                <FaReact className="h-[2rem] w-[2rem] text-[--color-grey-0]" />
-                <h2 className="text-[1.1rem] text-gray-800">React js </h2>
-              </div>
-              <div className="flex flex-col items-center gap-2">
-                <RiNextjsLine className="h-[2rem] w-[2rem] text-[--color-grey-0]" />
-                <h2 className="text-[1.1rem] text-gray-800">Next js</h2>
-              </div>
-              <div className="flex flex-col items-center gap-2">
-                <TbBrandReactNative className="h-[2rem] w-[2rem] text-[--color-grey-0]" />
-                <h2 className="text-[1.1rem] text-gray-800">React Native</h2>
-              </div>
-              <div className="flex flex-col items-center gap-2">
-                <RiTailwindCssFill className="h-[2rem] w-[2rem] text-[--color-grey-0]" />
-                <h2 className="text-[1.1rem] text-gray-800">Tailwind</h2>
+                <div className="flex flex-col items-center gap-2">
+                  <FaReact className="h-[2rem] w-[2rem] text-[--color-grey-0]" />
+                  {/* <h2 className="text-[1.1rem] text-gray-800 opacity-0 md:opacity-100">
+                    React js{" "}
+                  </h2> */}
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <RiNextjsLine className="h-[2rem] w-[2rem] text-[--color-grey-0]" />
+                  {/* <h2 className="text-[1.1rem] text-gray-800 opacity-0 md:opacity-100">
+                    Next js
+                  </h2> */}
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <TbBrandReactNative className="h-[2rem] w-[2rem] text-[--color-grey-0]" />
+                  {/* <h2 className="text-[1.1rem] text-gray-800 opacity-0 md:opacity-100">
+                    React Native
+                  </h2> */}
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <RiTailwindCssFill className="h-[2rem] w-[2rem] text-[--color-grey-0]" />
+                  {/* <h2 className="text-[1.1rem] text-gray-800 opacity-0 md:opacity-100">
+                    Tailwind
+                  </h2> */}
+                </div>
               </div>
             </div>
           </div>
@@ -66,30 +78,48 @@ function HomePage() {
           <img src="/portjpg.png" className="mx-auto h-[330px] w-[300px]" />
         </div>
       </div>
-      <div className="mt-20 flex w-full flex-col">
+      <div className="flex w-full flex-col md:mt-20">
         <h2 className="mb-10 text-[2rem] font-semibold text-[--color-grey-900]">
           Latest Projects
         </h2>
         <div className="flex justify-between gap-12 max-md:flex-col">
-          <div className="flex flex-col items-center gap-4 rounded-xl bg-primary-800 px-4 py-4">
+          {/* <div className="flex flex-col items-center gap-4 rounded-xl bg-primary-800 px-4 py-4">
             <img src="/wild1.jpg" className="h-[20rem] w-[35rem]" />
             <p className="rounded-full bg-gray-500 px-4 py-1 text-center text-[1.2rem] font-semibold tracking-wider">
               The Wild Oasis-- Admin
             </p>
+          </div> */}
+          <div className="flex flex-col gap-4">
+            <p className="px-4 py-1 text-[1.2rem] font-semibold tracking-wider">
+              The Wild Oasis-- Admin
+            </p>
+            <img src="/oas01.png" className="h-[20rem] w-[35rem]" />
           </div>
 
-          <div className="flex flex-col items-center gap-4 rounded-xl bg-accent-600 px-4 py-4">
+          {/* <div className="flex flex-col items-center gap-4 rounded-xl bg-accent-600 px-4 py-4">
             <img src="/wildweb1.png" className="h-[20rem] w-[40rem]" />
             <p className="rounded-full bg-gray-500 px-4 py-1 text-center text-[1.2rem] font-semibold tracking-wider">
               The Wild Oasis-- Client
             </p>
+          </div> */}
+          <div className="flex flex-col gap-4">
+            <p className="px-4 py-1 text-[1.2rem] font-semibold tracking-wider">
+              The Wild Oasis-- Client
+            </p>
+            <img src="/wildweb1.png" className="h-[20rem] w-[35rem]" />
           </div>
 
-          <div className="flex flex-col items-center gap-4 rounded-xl bg-gray-800 px-4 py-4">
+          {/* <div className="flex flex-col items-center gap-4 rounded-xl bg-gray-800 px-4 py-4">
             <img src="/rating1.png" className="h-[20rem] w-[40rem]" />
             <p className="rounded-full bg-gray-500 px-4 py-1 text-center text-[1.2rem] font-semibold tracking-wider">
               iRating Web App
             </p>
+          </div> */}
+          <div className="flex flex-col gap-4">
+            <p className="px-4 py-1 text-[1.2rem] font-semibold tracking-wider">
+              iRating Web App
+            </p>
+            <img src="/rating1.png" className="h-[20rem] w-[35rem]" />
           </div>
         </div>
       </div>

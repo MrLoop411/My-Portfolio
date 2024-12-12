@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { FaTimes } from "react-icons/fa";
 import { IoMenuOutline } from "react-icons/io5";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import DarkModeToogle from "./DarkModeToogle";
 
 function PageNav() {
@@ -12,16 +12,18 @@ function PageNav() {
 
   return (
     <header className="flex items-center justify-between text-[1.4rem] text-gray-950">
-      <h2 className="text-[2rem] font-semibold italic tracking-widest text-[--color-grey-900]">
+      {/* <h2 className="text-[2rem] font-semibold italic tracking-widest text-[--color-grey-900]">
         Tee
-      </h2>
-
+      </h2> */}
+      <Link to="/">
+        <img src="/C.png" className="h-[10rem] w-[10rem]" />
+      </Link>
       <nav ref={navRef} className="flex items-center gap-12 text-gray-700">
         <NavLink
           className="transition-all duration-300 hover:text-[--color-grey-900]"
-          to="/"
+          to="/about"
         >
-          Home
+          About
         </NavLink>
 
         <NavLink
