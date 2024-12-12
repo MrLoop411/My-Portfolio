@@ -6,10 +6,10 @@ function AboutPage() {
       <PageNav />
 
       <div className="w-full items-center justify-between md:flex">
-        <div className="w-[40%] rounded-xl bg-[--color-grey-500] px-12 py-12 opacity-0 md:opacity-100">
+        <div className="rounded-xl bg-[--color-grey-500] px-12 py-12 opacity-0 md:w-[40%] md:opacity-100">
           <img src="/portjpg.png" className="mx-auto h-[230px] w-[200px]" />
         </div>
-        <div className="flex w-[40%] flex-col gap-4">
+        <div className="flex flex-col gap-4 md:w-[40%]">
           <h1 className="text-[4rem] font-semibold text-[--color-grey-900]">
             Hi there!
           </h1>
@@ -21,7 +21,7 @@ function AboutPage() {
         </div>
       </div>
       <div className="w-full items-center justify-between md:flex">
-        <div className="flex w-[40%] flex-col gap-4">
+        <div className="flex flex-col gap-4 md:w-[40%]">
           <h2 className="text-[2.5rem] font-semibold text-[--color-grey-900]">
             My Career So Far
           </h2>
@@ -32,7 +32,7 @@ function AboutPage() {
             Media and Tech industry.
           </p>
         </div>
-        <div className="grid w-[40%] grid-cols-3 gap-8 text-[1.4rem] font-semibold text-[--color-grey-900]">
+        <div className="grid grid-cols-3 gap-8 text-[1.4rem] font-semibold text-[--color-grey-900] md:w-[40%]">
           <div className="rounded-lg border border-[--color-grey-300] px-4 py-2 text-center">
             UI DESIGN
           </div>
