@@ -19,22 +19,55 @@ function ProjectsPage() {
         </p> */}
       </div>
 
-      <ul className="mt-8 grid-cols-[1fr_1fr_1fr] gap-12 space-y-10 text-center sm:grid">
-        <li className="flex flex-col gap-4 rounded-xl bg-gray-200 px-6 py-6 text-[1.2rem] text-gray-800">
+      <div className="mt-8 items-center justify-between space-y-10 md:flex md:space-y-0">
+        {/* <li className="flex flex-col gap-4 rounded-xl bg-gray-200 px-6 py-6 text-[1.2rem] text-gray-800">
           <img src="/wildweb1.png" className="h-[100%] w-[100%]" />
           <p> WorldWise Customer Web App</p>
-        </li>
+        </li> */}
+        <div className="flex flex-col gap-8">
+          <img src="/oas01.png" className="h-[20rem] w-[35rem]" />
+          <div className="flex items-center justify-between">
+            <p className="px-4 py-1 text-[1.2rem] font-semibold tracking-wider text-[--color-grey-900]">
+              The Wild Oasis-- Admin
+            </p>
+            <button className="rounded-full bg-accent-500 px-6 py-2 text-[1.2rem] font-semibold text-[--color-grey-0] hover:bg-accent-400">
+              View details
+            </button>
+          </div>
+        </div>
 
-        <li className="flex flex-col gap-4 rounded-xl bg-gray-200 px-6 py-6 text-[1.2rem] text-gray-800">
+        {/* <li className="flex flex-col gap-4 rounded-xl bg-gray-200 px-6 py-6 text-[1.2rem] text-gray-800">
           <img src="/oas01.png" className="h-[100%] w-[100%]" />
           <p> WorldWise Admin Web App</p>
-        </li>
+        </li> */}
+        <div className="flex flex-col gap-8">
+          <img src="/wildweb1.png" className="h-[20rem] w-[35rem]" />
+          <div className="flex items-center justify-between">
+            <p className="px-4 py-1 text-[1.2rem] font-semibold tracking-wider text-[--color-grey-900]">
+              The Wild Oasis-- Client
+            </p>
+            <button className="rounded-full bg-accent-500 px-6 py-2 text-[1.2rem] font-semibold text-[--color-grey-0] hover:bg-accent-400">
+              View details
+            </button>
+          </div>
+        </div>
 
-        <li className="flex flex-col gap-4 rounded-xl bg-gray-200 px-6 py-6 text-[1.2rem] text-gray-800">
+        {/* <li className="flex flex-col gap-4 rounded-xl bg-gray-200 px-6 py-6 text-[1.2rem] text-gray-800">
           <img src="/rating1.png" className="h-[100%] w-[100%]" />
           <p>iRating Web App</p>
-        </li>
-      </ul>
+        </li> */}
+        <div className="flex flex-col gap-8">
+          <img src="/rating1.png" className="h-[20rem] w-[35rem]" />
+          <div className="flex items-center justify-between">
+            <p className="px-4 py-1 text-[1.2rem] font-semibold tracking-wider text-[--color-grey-900]">
+              iRating Web App
+            </p>
+            <button className="rounded-full bg-accent-500 px-6 py-2 text-[1.2rem] font-semibold text-[--color-grey-0] hover:bg-accent-400">
+              View details
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

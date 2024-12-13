@@ -16,7 +16,8 @@ function PageNav() {
         Tee
       </h2> */}
       <Link to="/">
-        <img src="/C.png" className="h-[10rem] w-[10rem]" />
+        {/* <img src="/C.png" className="h-[10rem] w-[10rem]" /> */}
+        <img src="/cwt0008.png" className="h-[10rem] w-[10rem]" />
       </Link>
       <nav ref={navRef} className="flex items-center gap-12 text-gray-700">
         <NavLink
