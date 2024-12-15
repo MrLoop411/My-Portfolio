@@ -19,7 +19,7 @@ function ProjectsPage() {
         </p> */}
       </div>
 
-      <div className="mt-8 items-center justify-between space-y-10 md:flex md:space-y-0">
+      <div className="mt-8 items-center justify-between space-y-10 md:flex md:space-x-10 md:space-y-0">
         {/* <li className="flex flex-col gap-4 rounded-xl bg-gray-200 px-6 py-6 text-[1.2rem] text-gray-800">
           <img src="/wildweb1.png" className="h-[100%] w-[100%]" />
           <p> WorldWise Customer Web App</p>
