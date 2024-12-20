@@ -36,7 +36,7 @@ function ContactMePage() {
   };
 
   return (
-    <div className="mt-20 grid-cols-2 gap-20 bg-[--color-grey-0] px-[5.5rem] py-[4.5rem] sm:grid">
+    <div className="mt-20 w-full grid-cols-2 gap-20 bg-[--color-grey-0] px-[5.5rem] py-[4.5rem] sm:grid">
       <div className="flex flex-col gap-12">
         <Link
           to="/"
@@ -101,7 +101,7 @@ function ContactMePage() {
                 {!submitting ? "Lets Talk" : <SpinnerMini />}
               </button>
             </form>
-            <div className="flex items-center justify-center gap-12 sm:opacity-0">
+            <div className="flex items-center justify-center gap-12 text-[--color-grey-900] sm:opacity-0">
               <FaInstagram className="h-[3rem] w-[3rem]" />
               <FaTwitter className="h-[3rem] w-[3rem]" />
               <FaLinkedinIn className="h-[3rem] w-[3rem]" />
@@ -109,13 +109,44 @@ function ContactMePage() {
           </>
         )}
       </div>
-      <div className="mt-20 flex flex-col items-center gap-8 rounded-lg bg-[--color-grey-0] px-2 py-8 opacity-0 sm:opacity-100">
-        <img src="/bg707.png" className="h-[400px] w-[400px] flex-1" />
-        <div className="flex gap-12">
+      <div className="mt-20 flex flex-col items-center justify-center gap-8 rounded-lg opacity-0 sm:opacity-100">
+        {/* <img src="/bg707.png" className="h-[400px] w-[400px] flex-1" /> */}
+        <div className="w-[40%] rounded-2xl bg-[--color-grey-200] px-12 py-12">
+          <h2 className="text-[4rem] font-semibold text-[--color-grey-900]">
+            Let's Connect and Chat
+          </h2>
+        </div>
+        <div className="flex w-[70%] flex-col items-center rounded-2xl bg-primary-700 px-12 py-8 text-[--color-grey-0]">
+          <div className="flex pl-[25px]">
+            <div className="rounded-full border border-[--color-grey-0] px-6 py-2 text-[2rem]">
+              <h2>FOLLOW ME!</h2>
+            </div>
+            <div className="rotate-[15deg] rounded-full border border-[--color-grey-0] px-6 py-2 text-[2rem]">
+              <h2>👀🤩</h2>
+            </div>
+          </div>
+          <div className="flex pt-[4px]">
+            <div className="rotate-[15deg] rounded-full border border-[--color-grey-0] px-6 py-2 text-[2rem]">
+              <h2>INSTAGRAM</h2>
+            </div>
+            <div className="rounded-full border border-[--color-grey-0] px-6 py-2 text-[2rem]">
+              <h2>LINKEDIN</h2>
+            </div>
+          </div>
+          <div className="flex pr-[45px] pt-[7px]">
+            <div className="rounded-full border border-[--color-grey-0] px-6 py-2 text-[2rem]">
+              <h2>TWITTER</h2>
+            </div>
+            <div className="rounded-full border border-[--color-grey-0] px-6 py-2 text-[2rem]">
+              <h2>TIKTOK</h2>
+            </div>
+          </div>
+        </div>
+        {/* <div className="flex gap-12">
           <FaInstagram className="h-[3rem] w-[3rem] text-[--color-grey-900]" />
           <FaTwitter className="h-[3rem] w-[3rem] text-[--color-grey-900]" />
           <FaLinkedinIn className="h-[3rem] w-[3rem] text-[--color-grey-900]" />
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -16,6 +16,7 @@ function DarkModeProvider({ children }) {
     },
     [isDarkMode],
   );
+
   function toggleDarkMode() {
     setIsDarkMode((isDark) => !isDark);
   }
