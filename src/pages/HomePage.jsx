@@ -93,7 +93,7 @@ function HomePage() {
             <p className="px-4 py-1 text-[1.2rem] font-semibold tracking-wider text-[--color-grey-900]">
               The Wild Oasis-- Admin
             </p>
-            <img src="/oas01.png" className="h-[20rem] w-[35rem]" />
+            <img src="/oasis903.png" className="h-[20rem] w-[35rem]" />
           </div>
 
           {/* <div className="flex flex-col items-center gap-4 rounded-xl bg-accent-600 px-4 py-4">

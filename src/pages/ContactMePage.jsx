@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import SpinnerMini from "../components/SpinnerMini";
+import { FaThumbsUp } from "react-icons/fa";
 
 function ContactMePage() {
   const [result, setResult] = useState("");
@@ -45,10 +46,10 @@ function ContactMePage() {
           &larr; Go back Home
         </Link>
         {submitted ? (
-          <div className="flex flex-col gap-8 text-[2rem]">
+          <div className="flex flex-col gap-8 text-[2rem] text-[--color-grey-900]">
             {result}
             <span className="ml-60 animate-fadein">
-              <img src="/thu01.png" className="h-[200px] w-[200px]" />
+              <FaThumbsUp className="h-[200px] w-[200px] text-[--color-grey-900]" />
             </span>
           </div>
         ) : (
