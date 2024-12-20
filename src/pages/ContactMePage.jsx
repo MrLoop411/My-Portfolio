@@ -46,9 +46,9 @@ function ContactMePage() {
           &larr; Go back Home
         </Link>
         {submitted ? (
-          <div className="flex flex-col gap-8 text-[2rem] text-[--color-grey-900]">
+          <div className="flex flex-col items-center gap-8 text-[2rem] text-[--color-grey-900]">
             {result}
-            <span className="ml-60 animate-fadein">
+            <span className="animate-fadein">
               <FaThumbsUp className="h-[200px] w-[200px] text-[--color-grey-900]" />
             </span>
           </div>
