@@ -34,6 +34,7 @@ function ContactMePage() {
       console.log("Error", data);
       setResult(data.message);
     }
+    setSubmitting(false);
   };
 
   return (

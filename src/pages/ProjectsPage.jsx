@@ -41,6 +41,20 @@ function ProjectsPage() {
       url: "/rating900.png",
     },
   ];
+  const wildCollection4 = [
+    {
+      label: "first",
+      url: "/cwt-clean01.png",
+    },
+    {
+      label: "second",
+      url: "/cwt-clean02.png",
+    },
+    {
+      label: "third",
+      url: "/cwt-clean03.png",
+    },
+  ];
 
   return (
     <div className="flex h-full flex-col gap-12 bg-[--color-grey-0] px-[5.5rem] py-[4.5rem]">
@@ -85,6 +99,21 @@ function ProjectsPage() {
             </p>
             <a
               href="https://i-rating-app.vercel.app"
+              target="_blank"
+              className="rounded-full bg-accent-500 px-12 py-2 text-[1.2rem] font-semibold text-[--color-grey-0] hover:bg-accent-400"
+            >
+              Visit
+            </a>
+          </div>
+        </div>
+        <div className="h-[200px] w-[300px] space-y-8">
+          <ImageSlider slides={wildCollection4} parentWidth={300} />
+          <div className="flex items-center justify-between">
+            <p className="px-4 py-1 text-[1.2rem] font-semibold tracking-wider text-[--color-grey-900]">
+              The CWT Cleaning Co.
+            </p>
+            <a
+              href="https://the-cwt-cleaning-co.vercel.app"
               target="_blank"
               className="rounded-full bg-accent-500 px-12 py-2 text-[1.2rem] font-semibold text-[--color-grey-0] hover:bg-accent-400"
             >
