@@ -83,12 +83,12 @@ function HomePage() {
           Latest Projects
         </h2>
         <div className="flex justify-between gap-12 max-md:flex-col">
-          {/* <div className="flex flex-col items-center gap-4 rounded-xl bg-primary-800 px-4 py-4">
-            <img src="/wild1.jpg" className="h-[20rem] w-[35rem]" />
-            <p className="rounded-full bg-gray-500 px-4 py-1 text-center text-[1.2rem] font-semibold tracking-wider">
-              The Wild Oasis-- Admin
+          <div className="flex flex-col gap-4">
+            <p className="px-4 py-1 text-[1.2rem] font-semibold tracking-wider text-[--color-grey-900]">
+              The CWT Cleaning Co.
             </p>
-          </div> */}
+            <img src="/cwt-clean01.png" className="h-[20rem] w-[35rem]" />
+          </div>
           <div className="flex flex-col gap-4">
             <p className="px-4 py-1 text-[1.2rem] font-semibold tracking-wider text-[--color-grey-900]">
               The Wild Oasis-- Admin
@@ -96,30 +96,11 @@ function HomePage() {
             <img src="/oasis903.png" className="h-[20rem] w-[35rem]" />
           </div>
 
-          {/* <div className="flex flex-col items-center gap-4 rounded-xl bg-accent-600 px-4 py-4">
-            <img src="/wildweb1.png" className="h-[20rem] w-[40rem]" />
-            <p className="rounded-full bg-gray-500 px-4 py-1 text-center text-[1.2rem] font-semibold tracking-wider">
-              The Wild Oasis-- Client
-            </p>
-          </div> */}
           <div className="flex flex-col gap-4">
             <p className="px-4 py-1 text-[1.2rem] font-semibold tracking-wider text-[--color-grey-900]">
               The Wild Oasis-- Client
             </p>
             <img src="/wildweb1.png" className="h-[20rem] w-[35rem]" />
-          </div>
-
-          {/* <div className="flex flex-col items-center gap-4 rounded-xl bg-gray-800 px-4 py-4">
-            <img src="/rating1.png" className="h-[20rem] w-[40rem]" />
-            <p className="rounded-full bg-gray-500 px-4 py-1 text-center text-[1.2rem] font-semibold tracking-wider">
-              iRating Web App
-            </p>
-          </div> */}
-          <div className="flex flex-col gap-4">
-            <p className="px-4 py-1 text-[1.2rem] font-semibold tracking-wider text-[--color-grey-900]">
-              The CWT Cleaning Co.
-            </p>
-            <img src="/cwt-clean01.png" className="h-[20rem] w-[35rem]" />
           </div>
         </div>
       </div>

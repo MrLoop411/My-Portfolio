@@ -67,7 +67,22 @@ function ProjectsPage() {
         <p className="text-[1.4rem] text-[--color-grey-900]">Take a look !</p>
       </div>
 
-      <div className="mt-8 items-center justify-between space-y-32 md:flex md:space-x-10 md:space-y-0">
+      <div className="mt-8 gap-32 space-y-32 md:self-center lg:grid lg:grid-cols-4 lg:space-y-0">
+        <div className="h-[200px] w-[300px] space-y-8">
+          <ImageSlider slides={wildCollection4} parentWidth={300} />
+          <div className="flex items-center justify-between">
+            <p className="px-4 py-1 text-[1.2rem] font-semibold tracking-wider text-[--color-grey-900]">
+              The CWT Cleaning Co.
+            </p>
+            <a
+              href="https://the-cwt-cleaning-co.vercel.app"
+              target="_blank"
+              className="rounded-full bg-accent-500 px-12 py-2 text-[1.2rem] font-semibold text-[--color-grey-0] hover:bg-accent-400"
+            >
+              Visit
+            </a>
+          </div>
+        </div>
         <div className="h-[200px] w-[300px] space-y-8">
           <ImageSlider slides={wildCollection1} parentWidth={300} />
           <div className="flex items-center justify-between">
@@ -99,21 +114,6 @@ function ProjectsPage() {
             </p>
             <a
               href="https://i-rating-app.vercel.app"
-              target="_blank"
-              className="rounded-full bg-accent-500 px-12 py-2 text-[1.2rem] font-semibold text-[--color-grey-0] hover:bg-accent-400"
-            >
-              Visit
-            </a>
-          </div>
-        </div>
-        <div className="h-[200px] w-[300px] space-y-8">
-          <ImageSlider slides={wildCollection4} parentWidth={300} />
-          <div className="flex items-center justify-between">
-            <p className="px-4 py-1 text-[1.2rem] font-semibold tracking-wider text-[--color-grey-900]">
-              The CWT Cleaning Co.
-            </p>
-            <a
-              href="https://the-cwt-cleaning-co.vercel.app"
               target="_blank"
               className="rounded-full bg-accent-500 px-12 py-2 text-[1.2rem] font-semibold text-[--color-grey-0] hover:bg-accent-400"
             >
