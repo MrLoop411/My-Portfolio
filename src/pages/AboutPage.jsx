@@ -1,6 +1,10 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 function AboutPage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen text-white relative overflow-hidden">
       {/* Animated Background */}
@@ -10,21 +14,45 @@ function AboutPage() {
       {/* Content */}
       <div className="relative z-10">
         {/* Navigation */}
-        <nav className="flex items-center justify-between px-8 py-6 lg:px-20">
-          <div className="text-2xl font-bold">Tobias</div>
+        <nav className="flex items-center justify-between px-8 py-6 lg:px-20 relative">
+          <Link to="/" className="text-2xl font-bold hover:text-orange-500 transition-colors">Tobias</Link>
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="hover:text-orange-500 transition-colors">Home</Link>
-            <Link to="/about" className="text-orange-500 transition-colors">About</Link>
+            <Link to="/about" className="text-orange-500 hover:text-orange-500 transition-colors">About</Link>
             <Link to="/services" className="hover:text-orange-500 transition-colors">Services</Link>
             <Link to="/projects" className="hover:text-orange-500 transition-colors">Portfolio</Link>
             <Link to="/contactme" className="hover:text-orange-500 transition-colors">Contact</Link>
           </div>
-          <Link 
-            to="/contactme"
-            className="bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded-full transition-colors"
-          >
-            Hire Me
-          </Link>
+          <div className="flex items-center space-x-4">
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden text-2xl hover:text-orange-500 transition-colors"
+            >
+              {mobileMenuOpen ? <FaTimes /> : <FaBars />}
+            </button>
+            
+            <Link 
+              to="/contactme"
+              className="hidden md:block bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded-full transition-colors"
+            >
+              Hire Me
+            </Link>
+          </div>
+
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <div className="absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-sm border-t border-gray-700 md:hidden z-50">
+              <div className="px-8 py-6 space-y-4">
+                <Link to="/" className="block py-2 hover:text-orange-500 transition-colors" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+                <Link to="/about" className="block py-2 text-orange-500 hover:text-orange-500 transition-colors" onClick={() => setMobileMenuOpen(false)}>About</Link>
+                <Link to="/services" className="block py-2 hover:text-orange-500 transition-colors" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+                <Link to="/projects" className="block py-2 hover:text-orange-500 transition-colors" onClick={() => setMobileMenuOpen(false)}>Portfolio</Link>
+                <Link to="/contactme" className="block py-2 hover:text-orange-500 transition-colors" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+                <Link to="/contactme" className="block bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-full transition-colors text-center mt-4" onClick={() => setMobileMenuOpen(false)}>Hire Me</Link>
+              </div>
+            </div>
+          )}
         </nav>
 
         {/* About Hero Section */}

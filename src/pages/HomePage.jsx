@@ -15,10 +15,12 @@ import { IoLogoJavascript } from "react-icons/io";
 import { SiFlutter, SiPython } from "react-icons/si";
 import { FaCode, FaMobile, FaGlobe } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 function HomePage() {
   const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [counters, setCounters] = useState({
     years: 0,
     projects: 0,
@@ -135,7 +137,7 @@ function HomePage() {
       <div className="relative z-10">
         {/* Navigation */}
         <nav className="flex items-center justify-between px-8 py-6 lg:px-20">
-          <div className="text-2xl font-bold">Tobias</div>
+          <Link to="/" className="text-2xl font-bold hover:text-orange-500 transition-colors">Tobias</Link>
           <div className="hidden items-center space-x-8 md:flex">
             <Link to="/" className="transition-colors hover:text-orange-500">
               Home
@@ -165,12 +167,72 @@ function HomePage() {
               Contact
             </Link>
           </div>
-          <Link
-            to="/contactme"
-            className="rounded-full bg-orange-500 px-6 py-2 transition-colors hover:bg-orange-600"
-          >
-            Hire Me
-          </Link>
+          <div className="flex items-center space-x-4">
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden text-2xl hover:text-orange-500 transition-colors"
+            >
+              {mobileMenuOpen ? <FaTimes /> : <FaBars />}
+            </button>
+            
+            <Link
+              to="/contactme"
+              className="hidden md:block rounded-full bg-orange-500 px-6 py-2 transition-colors hover:bg-orange-600"
+            >
+              Hire Me
+            </Link>
+          </div>
+
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <div className="absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-sm border-t border-gray-700 md:hidden z-50">
+              <div className="px-8 py-6 space-y-4">
+                <Link 
+                  to="/" 
+                  className="block py-2 hover:text-orange-500 transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Home
+                </Link>
+                <Link 
+                  to="/about" 
+                  className="block py-2 hover:text-orange-500 transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  About
+                </Link>
+                <Link 
+                  to="/services" 
+                  className="block py-2 hover:text-orange-500 transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Services
+                </Link>
+                <Link 
+                  to="/projects" 
+                  className="block py-2 hover:text-orange-500 transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Portfolio
+                </Link>
+                <Link 
+                  to="/contactme" 
+                  className="block py-2 hover:text-orange-500 transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Contact
+                </Link>
+                <Link
+                  to="/contactme"
+                  className="block bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-full transition-colors text-center mt-4"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Hire Me
+                </Link>
+              </div>
+            </div>
+          )}
         </nav>
 
         {/* Hero Section */}
