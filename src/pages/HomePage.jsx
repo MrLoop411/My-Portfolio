@@ -136,7 +136,7 @@ function HomePage() {
       {/* Content */}
       <div className="relative z-10">
         {/* Navigation */}
-        <nav className="flex items-center justify-between px-8 py-6 lg:px-20">
+        <nav className="flex items-center justify-between px-8 py-6 lg:px-20 relative">
           <Link to="/" className="text-2xl font-bold hover:text-orange-500 transition-colors">Tobias</Link>
           <div className="hidden items-center space-x-8 md:flex">
             <Link to="/" className="transition-colors hover:text-orange-500">
@@ -186,7 +186,7 @@ function HomePage() {
 
           {/* Mobile Menu */}
           {mobileMenuOpen && (
-            <div className="absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-sm border-t border-gray-700 md:hidden z-50">
+            <div className="absolute top-full left-0 right-0 bg-gray-900/98 backdrop-blur-sm border-t border-gray-700 md:hidden z-[999] shadow-lg">
               <div className="px-8 py-6 space-y-4">
                 <Link 
                   to="/" 

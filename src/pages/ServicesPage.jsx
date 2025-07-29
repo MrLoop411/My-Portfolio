@@ -94,7 +94,7 @@ function ServicesPage() {
 
           {/* Mobile Menu */}
           {mobileMenuOpen && (
-            <div className="absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-sm border-t border-gray-700 md:hidden z-50">
+            <div className="absolute top-full left-0 right-0 bg-gray-900/98 backdrop-blur-sm border-t border-gray-700 md:hidden z-[999] shadow-lg">
               <div className="px-8 py-6 space-y-4">
                 <Link 
                   to="/" 
