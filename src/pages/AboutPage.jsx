@@ -130,6 +130,12 @@ function AboutPage() {
               <div className="bg-orange-500 text-black rounded-lg px-4 py-3 text-center">
                 <span className="text-sm font-semibold">React Native</span>
               </div>
+              <div className="bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-center hover:border-orange-500 transition-colors">
+                <span className="text-sm font-medium">Python</span>
+              </div>
+              <div className="bg-orange-500 text-black rounded-lg px-4 py-3 text-center">
+                <span className="text-sm font-semibold">Flutter</span>
+              </div>
             </div>
           </div>
         </section>

@@ -66,7 +66,7 @@ function ServicesPage() {
       {/* Content */}
       <div className="relative z-10">
         {/* Navigation */}
-        <nav className="flex items-center justify-between px-8 py-6 lg:px-20">
+        <nav className="flex items-center justify-between px-8 py-6 lg:px-20 relative">
           <Link to="/" className="text-2xl font-bold hover:text-orange-500 transition-colors">Tobias</Link>
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="hover:text-orange-500 transition-colors">Home</Link>
