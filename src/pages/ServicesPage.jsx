@@ -1,35 +1,56 @@
 import { Link } from "react-router-dom";
-import { FaCode, FaMobile, FaGlobe, FaPalette, FaRocket, FaUsers } from "react-icons/fa";
+import { FaCode, FaMobile, FaGlobe, FaPalette, FaRocket, FaUsers, FaServer, FaDatabase, FaCloud, FaLaptopCode } from "react-icons/fa";
+import { SiPython, SiReact, SiFlutter, SiJavascript, SiNextdotjs, SiTailwindcss } from "react-icons/si";
 
 function ServicesPage() {
   const services = [
     {
       id: 1,
-      icon: <FaPalette className="text-4xl text-orange-500" />,
-      title: "UI/UX Design",
-      description: "Designing the look and feel of interfaces optimized for different devices. Conducting tests to observe how users interact with prototypes to identify issues and areas for enhancement.",
-      features: ["User Research", "Wireframing", "Prototyping", "Usability Testing"]
+      icon: <SiReact className="text-4xl text-blue-500" />,
+      title: "Frontend Web Development",
+      description: "Building modern, responsive, and interactive web applications using cutting-edge technologies. Specializing in React, Next.js, and advanced JavaScript frameworks with beautiful UI/UX design.",
+      features: ["React & Next.js Apps", "Responsive Design", "Modern JavaScript", "Tailwind CSS Styling", "Performance Optimization", "SEO Implementation"],
+      techStack: ["JavaScript", "React", "Next.js", "Tailwind CSS"]
     },
     {
       id: 2,
-      icon: <FaGlobe className="text-4xl text-orange-500" />,
-      title: "Website Development",
-      description: "Understanding your business goals, target audience, and industry to create websites that align with your objectives. Building responsive interfaces with HTML, CSS, and JavaScript.",
-      features: ["Responsive Design", "SEO Optimization", "Performance Tuning", "Cross-browser Support"]
+      icon: <SiPython className="text-4xl text-green-500" />,
+      title: "Backend & Python Development",
+      description: "Creating robust server-side applications, APIs, and automation scripts with Python. From web backends to data processing and automation tools for your business needs.",
+      features: ["REST API Development", "Database Integration", "Web Scraping", "Automation Scripts", "Data Processing", "Server Architecture"],
+      techStack: ["Python", "Flask/Django", "PostgreSQL", "MongoDB"]
     },
     {
       id: 3,
-      icon: <FaCode className="text-4xl text-orange-500" />,
-      title: "Web App Development",
-      description: "Assessing technical feasibility and market viability of web app ideas. Structuring and styling applications using React framework and modern CSS frameworks like Tailwind.",
-      features: ["React Development", "API Integration", "Database Design", "Performance Testing"]
+      icon: <FaMobile className="text-4xl text-purple-500" />,
+      title: "Cross-Platform Mobile Apps",
+      description: "Developing mobile applications that work seamlessly on both iOS and Android platforms using React Native and Flutter. One codebase, multiple platforms.",
+      features: ["React Native Development", "Flutter Applications", "Cross-platform Solutions", "App Store Deployment", "Push Notifications", "Native Performance"],
+      techStack: ["React Native", "Flutter", "JavaScript", "Dart"]
     },
     {
       id: 4,
-      icon: <FaMobile className="text-4xl text-orange-500" />,
-      title: "Mobile App Development",
-      description: "Deciding what platforms to target and offering guidance on monetization models. Developing cross-platform apps that run on both iOS and Android using React Native.",
-      features: ["React Native", "Cross-platform", "App Store Deployment", "Push Notifications"]
+      icon: <FaServer className="text-4xl text-indigo-500" />,
+      title: "Full-Stack Development",
+      description: "Complete end-to-end application development combining frontend, backend, and database technologies. From concept to deployment with modern DevOps practices.",
+      features: ["Complete Web Applications", "Database Design", "API Development", "Cloud Deployment", "Authentication Systems", "Real-time Features"],
+      techStack: ["React", "Python", "Node.js", "PostgreSQL"]
+    },
+    {
+      id: 5,
+      icon: <FaPalette className="text-4xl text-pink-500" />,
+      title: "UI/UX Design & Prototyping",
+      description: "Creating intuitive and visually appealing user interfaces with focus on user experience. From wireframes to high-fidelity prototypes and implementation.",
+      features: ["User Interface Design", "User Experience Research", "Wireframing & Prototyping", "Design Systems", "Responsive Design", "Accessibility"],
+      techStack: ["Figma", "Adobe XD", "CSS3", "Tailwind CSS"]
+    },
+    {
+      id: 6,
+      icon: <FaCloud className="text-4xl text-cyan-500" />,
+      title: "Web Automation & Scripting",
+      description: "Automating repetitive tasks, data collection, and business processes using Python scripts and web technologies. Increase efficiency and reduce manual work.",
+      features: ["Process Automation", "Web Scraping", "Data Collection", "Report Generation", "Task Scheduling", "Integration Solutions"],
+      techStack: ["Python", "Selenium", "BeautifulSoup", "APIs"]
     }
   ];
 
@@ -77,33 +98,46 @@ function ServicesPage() {
           <div className="mb-20">
             <h2 className="text-4xl font-bold text-center mb-16">How Can I Help You?</h2>
             
-            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {services.map((service) => (
-                <div key={service.id} className="bg-gray-800/50 rounded-2xl p-8 hover:transform hover:scale-105 transition-all duration-300">
+                <div key={service.id} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 hover:transform hover:scale-105 transition-all duration-300 border border-gray-700/50">
                   <div className="flex items-start gap-6 mb-6">
                     <div className="bg-gray-900 p-4 rounded-full">
                       {service.icon}
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
-                      <span className="text-orange-500 text-4xl font-bold">0{service.id}</span>
+                      <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+                      <span className="text-orange-500 text-2xl font-bold">0{service.id}</span>
                     </div>
                   </div>
                   
-                  <p className="text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-gray-300 mb-6 leading-relaxed text-sm">
                     {service.description}
                   </p>
                   
-                  <div className="space-y-2">
-                    <h4 className="font-semibold text-orange-500 mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, index) => (
-                        <li key={index} className="flex items-center gap-2 text-gray-300">
-                          <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold text-orange-500 mb-3">Key Features:</h4>
+                      <ul className="space-y-2">
+                        {service.features.map((feature, index) => (
+                          <li key={index} className="flex items-center gap-2 text-gray-300 text-sm">
+                            <div className="w-1.5 h-1.5 bg-orange-500 rounded-full flex-shrink-0"></div>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h4 className="font-semibold text-blue-400 mb-3">Tech Stack:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {service.techStack.map((tech, index) => (
+                          <span key={index} className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 px-3 py-1 rounded-full text-xs font-medium text-blue-300">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -119,28 +153,36 @@ function ServicesPage() {
               <p className="text-gray-400 text-xl">What sets me apart from the competition</p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center p-6">
+            <div className="grid md:grid-cols-4 gap-6">
+              <div className="text-center p-6 bg-gray-800/30 rounded-2xl border border-gray-700/50">
                 <FaRocket className="text-orange-500 text-5xl mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-3">Fast Delivery</h3>
-                <p className="text-gray-300">
-                  Quick turnaround times without compromising on quality. Your project will be delivered on time, every time.
+                <p className="text-gray-300 text-sm">
+                  Quick turnaround times without compromising quality. Agile development with regular updates.
                 </p>
               </div>
               
-              <div className="text-center p-6">
-                <FaUsers className="text-orange-500 text-5xl mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-3">Collaborative Approach</h3>
-                <p className="text-gray-300">
-                  I work closely with clients throughout the development process, ensuring your vision comes to life.
+              <div className="text-center p-6 bg-gray-800/30 rounded-2xl border border-gray-700/50">
+                <FaUsers className="text-blue-500 text-5xl mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-3">Full-Stack Expertise</h3>
+                <p className="text-gray-300 text-sm">
+                  Complete solution from frontend to backend, handling every aspect of your project.
                 </p>
               </div>
               
-              <div className="text-center p-6">
-                <FaCode className="text-orange-500 text-5xl mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-3">Modern Technology</h3>
-                <p className="text-gray-300">
-                  Using the latest technologies and best practices to build scalable, maintainable applications.
+              <div className="text-center p-6 bg-gray-800/30 rounded-2xl border border-gray-700/50">
+                <SiPython className="text-green-500 text-5xl mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-3">Python Automation</h3>
+                <p className="text-gray-300 text-sm">
+                  Streamline your business with custom Python scripts and automation solutions.
+                </p>
+              </div>
+              
+              <div className="text-center p-6 bg-gray-800/30 rounded-2xl border border-gray-700/50">
+                <FaCode className="text-purple-500 text-5xl mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-3">Modern Stack</h3>
+                <p className="text-gray-300 text-sm">
+                  Latest technologies: React, Next.js, Python, Flutter for cutting-edge solutions.
                 </p>
               </div>
             </div>
