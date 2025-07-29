@@ -12,7 +12,7 @@ import { RiNextjsLine } from "react-icons/ri";
 import { TbBrandReactNative } from "react-icons/tb";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoJavascript } from "react-icons/io";
-import { SiFlutter } from "react-icons/si";
+import { SiFlutter, SiPython } from "react-icons/si";
 import { FaCode, FaMobile, FaGlobe } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
@@ -367,6 +367,7 @@ function HomePage() {
               {[
                 { icon: <IoLogoJavascript className="text-5xl text-yellow-500" />, name: "JavaScript", level: 95 },
                 { icon: <FaReact className="text-5xl text-blue-500" />, name: "React", level: 90 },
+                { icon: <SiPython className="text-5xl text-green-500" />, name: "Python", level: 88 },
                 { icon: <RiNextjsLine className="text-5xl text-white" />, name: "Next.js", level: 85 },
                 { icon: <TbBrandReactNative className="text-5xl text-blue-400" />, name: "React Native", level: 80 },
                 { icon: <RiTailwindCssFill className="text-5xl text-teal-500" />, name: "Tailwind CSS", level: 92 },
