@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn, FaTwitter, FaGithub, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import SpinnerMini from "../components/SpinnerMini";
 import { FaThumbsUp } from "react-icons/fa";
@@ -38,117 +38,190 @@ function ContactMePage() {
   };
 
   return (
-    <div className="mt-20 w-full grid-cols-2 gap-20 bg-[--color-grey-0] px-[5.5rem] py-[4.5rem] sm:grid">
-      <div className="flex flex-col gap-12">
-        <Link
-          to="/"
-          className="text-[1.2rem] font-semibold text-primary-900 hover:text-primary-800"
-        >
-          &larr; Go back Home
-        </Link>
-        {submitted ? (
-          <div className="flex flex-col items-center gap-8 text-[2rem] text-[--color-grey-900]">
-            {result}
-            <span className="animate-fadein">
-              <FaThumbsUp className="h-[200px] w-[200px] text-[--color-grey-900]" />
-            </span>
+    <div className="min-h-screen text-white relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 animate-gradient-x"></div>
+      <div className="absolute inset-0 opacity-20" style={{backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"0.03\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"1\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"}}></div>
+      
+      {/* Content */}
+      <div className="relative z-10">
+        {/* Navigation */}
+        <nav className="flex items-center justify-between px-8 py-6 lg:px-20">
+          <div className="text-2xl font-bold">Tobias</div>
+          <div className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="hover:text-orange-500 transition-colors">Home</Link>
+            <Link to="/about" className="hover:text-orange-500 transition-colors">About</Link>
+            <Link to="/services" className="hover:text-orange-500 transition-colors">Services</Link>
+            <Link to="/projects" className="hover:text-orange-500 transition-colors">Portfolio</Link>
+            <Link to="/contactme" className="text-orange-500 transition-colors">Contact</Link>
           </div>
-        ) : (
-          <>
-            <div className="flex flex-col gap-4">
-              <h2 className="text-[3rem] font-semibold text-[--color-grey-900]">
-                Say Hello!
-              </h2>
-              <h2 className="text-[2rem] font-semibold text-[--color-grey-900]">
-                Lets Work Together
-              </h2>
-              <p className="text-[1.4rem] text-gray-800">
-                I would love to meet with You and discuss potential
-                Collaborations and Ventures
-              </p>
-            </div>
-            <form className="flex flex-col gap-12" onSubmit={onSubmitHandler}>
-              <input
-                type="text"
-                placeholder="Name"
-                name="name"
-                required
-                className="rounded-lg border border-gray-700 bg-gray-50 px-4 py-4 text-[1.4rem] capitalize placeholder:text-[1.2rem] placeholder:text-gray-700"
-              />
-              <input
-                className="rounded-lg border border-gray-700 bg-gray-50 px-4 py-4 text-[1.4rem] placeholder:text-[1.2rem] placeholder:text-gray-700"
-                name="phone"
-                type="number"
-                required
-                placeholder="Phone"
-              />
-              <input
-                className="rounded-lg border border-gray-700 bg-gray-50 px-4 py-4 text-[1.4rem] placeholder:text-[1.2rem] placeholder:text-gray-700"
-                name="email"
-                type="email"
-                // pattern=" /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/"
-                placeholder="Email Address"
-                required
-              />
-              <textarea
-                name="message"
-                id="message"
-                cols="100"
-                rows="5"
-                required
-                placeholder="Let me know what you need"
-                className="rounded-lg border border-gray-700 bg-gray-50 px-4 py-4 text-[1.4rem] placeholder:text-[1.2rem] placeholder:text-gray-700"
-              />
-              <button className="flex items-center justify-center rounded-lg bg-primary-900 px-10 py-4 text-center text-[1.2rem] font-semibold text-gray-100 hover:bg-primary-800">
-                {!submitting ? "Lets Talk" : <SpinnerMini />}
-              </button>
-            </form>
-            <div className="flex items-center justify-center gap-12 text-[--color-grey-900] sm:opacity-0">
-              <FaInstagram className="h-[3rem] w-[3rem]" />
-              <FaTwitter className="h-[3rem] w-[3rem]" />
-              <FaLinkedinIn className="h-[3rem] w-[3rem]" />
-            </div>
-          </>
-        )}
-      </div>
-      <div className="mt-20 flex flex-col items-center justify-center gap-8 rounded-lg opacity-0 sm:opacity-100">
-        {/* <img src="/bg707.png" className="h-[400px] w-[400px] flex-1" /> */}
-        <div className="w-[40%] rounded-2xl bg-[--color-grey-200] px-12 py-12">
-          <h2 className="text-[4rem] font-semibold text-[--color-grey-900]">
-            Let's Connect and Chat
-          </h2>
-        </div>
-        <div className="flex w-[70%] flex-col items-center rounded-2xl bg-primary-700 px-12 py-8 text-[--color-grey-0]">
-          <div className="flex pl-[25px]">
-            <div className="rounded-full border border-[--color-grey-0] px-6 py-2 text-[2rem]">
-              <h2>FOLLOW ME!</h2>
-            </div>
-            <div className="rotate-[15deg] rounded-full border border-[--color-grey-0] px-6 py-2 text-[2rem]">
-              <h2>👀🤩</h2>
-            </div>
+          <Link 
+            to="/contactme"
+            className="bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded-full transition-colors"
+          >
+            Hire Me
+          </Link>
+        </nav>
+
+        {/* Contact Content */}
+        <section className="px-8 py-20 lg:px-20">
+          <div className="max-w-6xl mx-auto">
+            {/* Back Link */}
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 text-orange-500 hover:text-orange-400 transition-colors mb-12 text-lg"
+            >
+              ← Go back Home
+            </Link>
+
+            {submitted ? (
+              <div className="text-center py-20">
+                <div className="max-w-2xl mx-auto">
+                  <FaThumbsUp className="text-orange-500 text-8xl mx-auto mb-8 animate-bounce" />
+                  <h2 className="text-4xl font-bold mb-6">Thank You!</h2>
+                  <p className="text-xl text-gray-300 leading-relaxed">
+                    {result}
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <div className="grid lg:grid-cols-2 gap-16">
+                {/* Contact Form */}
+                <div className="space-y-8">
+                  <div>
+                    <p className="text-orange-500 text-sm uppercase tracking-wider mb-4">Get In Touch</p>
+                    <h1 className="text-5xl font-bold mb-4">Say Hello!</h1>
+                    <h2 className="text-3xl font-semibold mb-6">Let's Work Together</h2>
+                    <p className="text-gray-300 text-lg leading-relaxed">
+                      I would love to meet with you and discuss potential collaborations and ventures. 
+                      Let's turn your ideas into reality!
+                    </p>
+                  </div>
+
+                  <form className="space-y-6" onSubmit={onSubmitHandler}>
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <input
+                        type="text"
+                        placeholder="Your Name"
+                        name="name"
+                        required
+                        className="w-full px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder:text-gray-400 focus:border-orange-500 focus:outline-none transition-colors"
+                      />
+                      <input
+                        type="email"
+                        placeholder="Email Address"
+                        name="email"
+                        required
+                        className="w-full px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder:text-gray-400 focus:border-orange-500 focus:outline-none transition-colors"
+                      />
+                    </div>
+                    
+                    <input
+                      type="tel"
+                      placeholder="Phone Number"
+                      name="phone"
+                      required
+                      className="w-full px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder:text-gray-400 focus:border-orange-500 focus:outline-none transition-colors"
+                    />
+                    
+                    <textarea
+                      name="message"
+                      rows="6"
+                      required
+                      placeholder="Tell me about your project..."
+                      className="w-full px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder:text-gray-400 focus:border-orange-500 focus:outline-none transition-colors resize-none"
+                    />
+                    
+                    <button 
+                      type="submit"
+                      className="w-full bg-orange-500 hover:bg-orange-600 text-black px-8 py-4 rounded-lg font-bold text-lg transition-colors flex items-center justify-center gap-2"
+                    >
+                      {submitting ? <SpinnerMini /> : "Let's Talk"}
+                    </button>
+                  </form>
+                </div>
+
+                {/* Contact Info */}
+                <div className="space-y-8">
+                  <div className="bg-gray-800/50 rounded-2xl p-8">
+                    <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+                    <div className="space-y-6">
+                      <div className="flex items-center gap-4">
+                        <div className="bg-orange-500 p-3 rounded-full">
+                          <FaEnvelope className="text-black" />
+                        </div>
+                        <div>
+                          <p className="text-gray-400">Email</p>
+                          <p className="text-white">your.email@example.com</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-center gap-4">
+                        <div className="bg-orange-500 p-3 rounded-full">
+                          <FaPhone className="text-black" />
+                        </div>
+                        <div>
+                          <p className="text-gray-400">Phone</p>
+                          <p className="text-white">+1 (555) 123-4567</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-center gap-4">
+                        <div className="bg-orange-500 p-3 rounded-full">
+                          <FaMapMarkerAlt className="text-black" />
+                        </div>
+                        <div>
+                          <p className="text-gray-400">Location</p>
+                          <p className="text-white">Your City, Country</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Social Connect */}
+                  <div className="bg-orange-500 text-black rounded-2xl p-8">
+                    <h3 className="text-2xl font-bold mb-6">Let's Connect!</h3>
+                    <p className="mb-6">Follow me on social media for updates and behind-the-scenes content.</p>
+                    
+                    <div className="grid grid-cols-2 gap-4">
+                      <a 
+                        href="#" 
+                        className="bg-black/20 hover:bg-black/30 rounded-lg p-4 text-center transition-colors"
+                      >
+                        <FaInstagram className="text-2xl mx-auto mb-2" />
+                        <span className="text-sm font-semibold">Instagram</span>
+                      </a>
+                      
+                      <a 
+                        href="#" 
+                        className="bg-black/20 hover:bg-black/30 rounded-lg p-4 text-center transition-colors"
+                      >
+                        <FaLinkedinIn className="text-2xl mx-auto mb-2" />
+                        <span className="text-sm font-semibold">LinkedIn</span>
+                      </a>
+                      
+                      <a 
+                        href="#" 
+                        className="bg-black/20 hover:bg-black/30 rounded-lg p-4 text-center transition-colors"
+                      >
+                        <FaTwitter className="text-2xl mx-auto mb-2" />
+                        <span className="text-sm font-semibold">Twitter</span>
+                      </a>
+                      
+                      <a 
+                        href="#" 
+                        className="bg-black/20 hover:bg-black/30 rounded-lg p-4 text-center transition-colors"
+                      >
+                        <FaGithub className="text-2xl mx-auto mb-2" />
+                        <span className="text-sm font-semibold">GitHub</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
-          <div className="flex pt-[4px]">
-            <div className="rotate-[15deg] rounded-full border border-[--color-grey-0] px-6 py-2 text-[2rem]">
-              <h2>INSTAGRAM</h2>
-            </div>
-            <div className="rounded-full border border-[--color-grey-0] px-6 py-2 text-[2rem]">
-              <h2>LINKEDIN</h2>
-            </div>
-          </div>
-          <div className="flex pr-[45px] pt-[7px]">
-            <div className="rounded-full border border-[--color-grey-0] px-6 py-2 text-[2rem]">
-              <h2>TWITTER</h2>
-            </div>
-            <div className="rounded-full border border-[--color-grey-0] px-6 py-2 text-[2rem]">
-              <h2>TIKTOK</h2>
-            </div>
-          </div>
-        </div>
-        {/* <div className="flex gap-12">
-          <FaInstagram className="h-[3rem] w-[3rem] text-[--color-grey-900]" />
-          <FaTwitter className="h-[3rem] w-[3rem] text-[--color-grey-900]" />
-          <FaLinkedinIn className="h-[3rem] w-[3rem] text-[--color-grey-900]" />
-        </div> */}
+        </section>
       </div>
     </div>
   );
