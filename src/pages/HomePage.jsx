@@ -12,7 +12,7 @@ import { RiNextjsLine } from "react-icons/ri";
 import { TbBrandReactNative } from "react-icons/tb";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoJavascript } from "react-icons/io";
-import { SiFlutter, SiPython } from "react-icons/si";
+import { SiFlutter, SiPython, SiWordpress } from "react-icons/si";
 import { FaCode, FaMobile, FaGlobe } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -433,7 +433,8 @@ function HomePage() {
                 { icon: <RiNextjsLine className="text-5xl text-white" />, name: "Next.js", level: 85 },
                 { icon: <TbBrandReactNative className="text-5xl text-blue-400" />, name: "React Native", level: 80 },
                 { icon: <RiTailwindCssFill className="text-5xl text-teal-500" />, name: "Tailwind CSS", level: 92 },
-                { icon: <SiFlutter className="text-5xl text-blue-400" />, name: "Flutter", level: 75 }
+                { icon: <SiFlutter className="text-5xl text-blue-400" />, name: "Flutter", level: 75 },
+                { icon: <SiWordpress className="text-5xl text-blue-600" />, name: "WordPress", level: 85 }
               ].map((skill, index) => (
                 <div key={skill.name} className={`card-hover bg-gray-900/30 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 animate-scaleIn opacity-0`} style={{animationDelay: `${index * 100}ms`}}>
                   <div className="flex items-center mb-4">
