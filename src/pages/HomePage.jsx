@@ -482,6 +482,31 @@ function HomePage() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <div className="overflow-hidden rounded-lg bg-gray-800 transition-all hover:scale-105 hover:transform">
               <img
+                src="/shot1-food-website1.png"
+                alt="DesireNg"
+                className="h-48 w-full object-cover"
+              />
+              <div className="p-6">
+                <h3 className="mb-2 text-xl font-semibold">
+                  DesireNg
+                </h3>
+                <p className="mb-4 text-sm text-gray-400">Food & Restaurant Website</p>
+                <div className="flex gap-2">
+                  <span className="rounded bg-orange-500 px-2 py-1 text-xs">
+                    React
+                  </span>
+                  <span className="rounded bg-green-500 px-2 py-1 text-xs">
+                    CSS3
+                  </span>
+                  <span className="rounded bg-yellow-500 px-2 py-1 text-xs">
+                    JavaScript
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="overflow-hidden rounded-lg bg-gray-800 transition-all hover:scale-105 hover:transform">
+              <img
                 src="/cwt-clean01.png"
                 alt="CWT Cleaning Co."
                 className="h-48 w-full object-cover"
@@ -519,28 +544,6 @@ function HomePage() {
                   </span>
                   <span className="rounded bg-green-500 px-2 py-1 text-xs">
                     Node.js
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="overflow-hidden rounded-lg bg-gray-800 transition-all hover:scale-105 hover:transform">
-              <img
-                src="/wildweb1.png"
-                alt="Wild Oasis Client"
-                className="h-48 w-full object-cover"
-              />
-              <div className="p-6">
-                <h3 className="mb-2 text-xl font-semibold">
-                  The Wild Oasis Client
-                </h3>
-                <p className="mb-4 text-sm text-gray-400">Client Portal</p>
-                <div className="flex gap-2">
-                  <span className="rounded bg-orange-500 px-2 py-1 text-xs">
-                    Next.js
-                  </span>
-                  <span className="rounded bg-blue-500 px-2 py-1 text-xs">
-                    TypeScript
                   </span>
                 </div>
               </div>
