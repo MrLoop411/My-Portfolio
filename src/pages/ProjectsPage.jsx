@@ -60,6 +60,21 @@ function ProjectsPage() {
     },
   ];
 
+  const dripCoCollection = [
+    {
+      label: "first",
+      url: "/fs-001.png",
+    },
+    {
+      label: "second",
+      url: "/fs-002.png",
+    },
+    {
+      label: "third",
+      url: "/fs-003.png",
+    },
+  ];
+
   const desireNgCollection = [
     {
       label: "first",
@@ -78,6 +93,16 @@ function ProjectsPage() {
   const projects = [
     {
       id: 1,
+      title: "Drip Co",
+      description:
+        "A modern fashion e-commerce website showcasing trendy clothing and accessories with an elegant design",
+      slides: dripCoCollection,
+      liveUrl: "https://drip-co-fashion-website-615m.vercel.app",
+      githubUrl: "#",
+      technologies: ["React", "Tailwind CSS", "JavaScript"],
+    },
+    {
+      id: 2,
       title: "DesireNg",
       description:
         "A modern food and restaurant website showcasing delicious cuisines with an elegant user interface",
@@ -87,7 +112,7 @@ function ProjectsPage() {
       technologies: ["React", "CSS3", "JavaScript"],
     },
     {
-      id: 2,
+      id: 3,
       title: "The CWT Cleaning Co.",
       description:
         "A modern business website for a cleaning service company with booking functionality",
@@ -97,7 +122,7 @@ function ProjectsPage() {
       technologies: ["React", "Tailwind CSS", "Node.js"],
     },
     {
-      id: 3,
+      id: 4,
       title: "The Wild Oasis - Admin",
       description:
         "A comprehensive admin dashboard for hotel management with booking and cabin management",
@@ -107,7 +132,7 @@ function ProjectsPage() {
       technologies: ["React", "Supabase", "React Query"],
     },
     {
-      id: 4,
+      id: 5,
       title: "The Wild Oasis - Client",
       description:
         "Customer-facing hotel booking website with authentication and reservation system",
@@ -115,16 +140,6 @@ function ProjectsPage() {
       liveUrl: "https://the-wild-oasis-website-demo-coral.vercel.app",
       githubUrl: "#",
       technologies: ["Next.js", "TypeScript", "Supabase"],
-    },
-    {
-      id: 5,
-      title: "iRating",
-      description:
-        "Interactive rating and review application with user authentication",
-      slides: wildCollection3,
-      liveUrl: "https://i-rating-app.vercel.app",
-      githubUrl: "#",
-      technologies: ["React", "Firebase", "Material-UI"],
     },
   ];
 
