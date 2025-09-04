@@ -482,6 +482,31 @@ function HomePage() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <div className="overflow-hidden rounded-lg bg-gray-800 transition-all hover:scale-105 hover:transform">
               <img
+                src="/ah400.png"
+                alt="The Apartment Hub"
+                className="h-48 w-full object-cover"
+              />
+              <div className="p-6">
+                <h3 className="mb-2 text-xl font-semibold">
+                  The Apartment Hub
+                </h3>
+                <p className="mb-4 text-sm text-gray-400">Apartment Rental Platform</p>
+                <div className="flex gap-2">
+                  <span className="rounded bg-orange-500 px-2 py-1 text-xs">
+                    React
+                  </span>
+                  <span className="rounded bg-blue-500 px-2 py-1 text-xs">
+                    Next.js
+                  </span>
+                  <span className="rounded bg-green-500 px-2 py-1 text-xs">
+                    TypeScript
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="overflow-hidden rounded-lg bg-gray-800 transition-all hover:scale-105 hover:transform">
+              <img
                 src="/fs-001.png"
                 alt="Drip Co"
                 className="h-48 w-full object-cover"
@@ -525,28 +550,6 @@ function HomePage() {
                   </span>
                   <span className="rounded bg-yellow-500 px-2 py-1 text-xs">
                     JavaScript
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="overflow-hidden rounded-lg bg-gray-800 transition-all hover:scale-105 hover:transform">
-              <img
-                src="/cwt-clean01.png"
-                alt="CWT Cleaning Co."
-                className="h-48 w-full object-cover"
-              />
-              <div className="p-6">
-                <h3 className="mb-2 text-xl font-semibold">
-                  The CWT Cleaning Co.
-                </h3>
-                <p className="mb-4 text-sm text-gray-400">Business Website</p>
-                <div className="flex gap-2">
-                  <span className="rounded bg-orange-500 px-2 py-1 text-xs">
-                    React
-                  </span>
-                  <span className="rounded bg-blue-500 px-2 py-1 text-xs">
-                    Tailwind
                   </span>
                 </div>
               </div>

@@ -90,9 +90,34 @@ function ProjectsPage() {
     },
   ];
 
+  const apartmentHubCollection = [
+    {
+      label: "first",
+      url: "/ah400.png",
+    },
+    {
+      label: "second",
+      url: "/ah401.png",
+    },
+    {
+      label: "third",
+      url: "/ah402.png",
+    },
+  ];
+
   const projects = [
     {
       id: 1,
+      title: "The Apartment Hub",
+      description:
+        "A comprehensive apartment rental platform connecting tenants and landlords with modern search and booking features",
+      slides: apartmentHubCollection,
+      liveUrl: "https://the-apartment-hub-website.vercel.app",
+      githubUrl: "#",
+      technologies: ["React", "Next.js", "TypeScript"],
+    },
+    {
+      id: 2,
       title: "Drip Co",
       description:
         "A modern fashion e-commerce website showcasing trendy clothing and accessories with an elegant design",
@@ -102,7 +127,7 @@ function ProjectsPage() {
       technologies: ["React", "Tailwind CSS", "JavaScript"],
     },
     {
-      id: 2,
+      id: 3,
       title: "DesireNg",
       description:
         "A modern food and restaurant website showcasing delicious cuisines with an elegant user interface",
@@ -110,16 +135,6 @@ function ProjectsPage() {
       liveUrl: "https://my-food-cocktail-delivery-website.vercel.app",
       githubUrl: "#",
       technologies: ["React", "CSS3", "JavaScript"],
-    },
-    {
-      id: 3,
-      title: "The CWT Cleaning Co.",
-      description:
-        "A modern business website for a cleaning service company with booking functionality",
-      slides: wildCollection4,
-      liveUrl: "https://the-cwt-cleaning-co.vercel.app",
-      githubUrl: "#",
-      technologies: ["React", "Tailwind CSS", "Node.js"],
     },
     {
       id: 4,
