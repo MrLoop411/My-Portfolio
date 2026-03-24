@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import {
   FaGithub,
@@ -77,7 +79,7 @@ const navLinks = [
   { label: "Contact", id: "contact" },
 ];
 
-export default function HomePage() {
+export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
