@@ -82,6 +82,8 @@ const navLinks = [
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [formStatus, setFormStatus] = useState("idle"); // idle | sending | success | error
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -364,7 +366,91 @@ export default function Home() {
               Available for collaborations, open-source contributions, and
               mentorship conversations.
             </p>
-            <div className="flex flex-col gap-5">
+
+            {formStatus === "success" ? (
+              <div className="border border-gray-800/80 p-6">
+                <p className="text-white text-sm font-medium mb-1">Message sent.</p>
+                <p className="text-gray-500 text-sm">
+                  Thanks for reaching out — I&apos;ll respond shortly.
+                </p>
+              </div>
+            ) : (
+              <form
+                onSubmit={async (e) => {
+                  e.preventDefault();
+                  setFormStatus("sending");
+                  try {
+                    const res = await fetch("/api/contact", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify(form),
+                    });
+                    if (res.ok) {
+                      setFormStatus("success");
+                    } else {
+                      setFormStatus("error");
+                    }
+                  } catch {
+                    setFormStatus("error");
+                  }
+                }}
+                className="flex flex-col gap-4"
+              >
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-gray-600 text-xs font-mono uppercase tracking-widest">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    value={form.name}
+                    onChange={(e) => setForm({ ...form, name: e.target.value })}
+                    placeholder="Your name"
+                    className="bg-transparent border border-gray-800 text-white text-sm px-4 py-3 placeholder-gray-700 focus:outline-none focus:border-gray-600 transition-colors"
+                  />
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-gray-600 text-xs font-mono uppercase tracking-widest">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    required
+                    value={form.email}
+                    onChange={(e) => setForm({ ...form, email: e.target.value })}
+                    placeholder="your@email.com"
+                    className="bg-transparent border border-gray-800 text-white text-sm px-4 py-3 placeholder-gray-700 focus:outline-none focus:border-gray-600 transition-colors"
+                  />
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-gray-600 text-xs font-mono uppercase tracking-widest">
+                    Message
+                  </label>
+                  <textarea
+                    required
+                    rows={5}
+                    value={form.message}
+                    onChange={(e) => setForm({ ...form, message: e.target.value })}
+                    placeholder="What's on your mind?"
+                    className="bg-transparent border border-gray-800 text-white text-sm px-4 py-3 placeholder-gray-700 focus:outline-none focus:border-gray-600 transition-colors resize-none"
+                  />
+                </div>
+                {formStatus === "error" && (
+                  <p className="text-red-500 text-xs">
+                    Something went wrong. Please try again.
+                  </p>
+                )}
+                <button
+                  type="submit"
+                  disabled={formStatus === "sending"}
+                  className="bg-orange-500 hover:bg-orange-600 disabled:opacity-50 disabled:cursor-not-allowed text-white px-6 py-3 text-sm font-medium transition-colors self-start"
+                >
+                  {formStatus === "sending" ? "Sending…" : "Send message"}
+                </button>
+              </form>
+            )}
+
+            <div className="flex flex-col gap-5 mt-12 pt-8 border-t border-gray-800/60">
               <a
                 href="https://github.com/MrLoop411"
                 target="_blank"
@@ -389,16 +475,10 @@ export default function Home() {
                 />
                 LinkedIn
               </a>
-              <a
-                href="mailto:tobyeroms411@gmail.com"
-                className="flex items-center gap-3 text-gray-500 hover:text-white transition-colors text-sm group"
-              >
-                <FaEnvelope
-                  size={15}
-                  className="text-gray-700 group-hover:text-orange-400 transition-colors"
-                />
-                Email
-              </a>
+              <span className="flex items-center gap-3 text-gray-500 text-sm">
+                <FaEnvelope size={15} className="text-gray-700" />
+                tobyeroms411@gmail.com
+              </span>
             </div>
           </div>
         </section>
